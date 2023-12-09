@@ -3393,7 +3393,7 @@ function library:CreateWindow(options, ...)
 				colored[1 + #colored] = {textbox, "BorderColor3", "elementBorder"}
 				textbox.Position = UDim2.fromScale(0.031, 0.48)
 				textbox.Selectable = true
-				textbox.Size = UDim2.fromOffset(230, 18)
+				textbox.Size = UDim2.fromOffset(30, 18)
 				textbox.Image = "rbxassetid://2454009026"
 				textbox.ImageColor3 = library.colors.bottomGradient
 				local colored_textbox_ImageColor3 = {textbox, "ImageColor3", "bottomGradient"}
