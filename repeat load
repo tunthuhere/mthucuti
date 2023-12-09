@@ -1,0 +1,112 @@
+repeat wait() until game:IsLoaded()
+local G = getgenv and getgenv() or _G or shared
+G.Get = setmetatable({}, {__index = function(A, B) return game:GetService(B) end})
+
+for i,v in pairs(game.GetChildren(game)) do
+    G[v.ClassName] = v
+end
+G.Player = Players.LocalPlayer
+G.wait = task.wait
+G.spawn = task.spawn
+G.Heartbeat = RunService.Heartbeat
+G.Stepped = RunService.Stepped
+G.RenderStepped = RunService.RenderStepped
+G.Error = ScriptContext.Error
+G.MessageOut = LogService.MessageOut
+G.Kick = Player.Kick
+G.Idled = Player.Idled
+local Name = game.PlaceId .. ".json"
+local Des = {}
+if makefolder and not isfile("Plutonium") then
+    makefolder("Plutonium")
+end
+G.Settings = {}
+local Pcall = pcall(function()
+    if isfile("Plutonium//" .. Name) then
+        readfile("Plutonium//" .. Name)
+    else
+        writefile("Plutonium//" .. Name, HttpService:JSONEncode(Des))
+    end
+end)
+if isfile("Plutonium//" .. Name) and readfile("Plutonium//" .. Name) then
+    Settings = HttpService:JSONDecode(readfile("Plutonium//" .. Name))
+end
+local Hack = {
+    "Kick",
+    "kick",
+}
+local Uh = {
+    Player.Idled,
+    ScriptContext.Error,
+    LogService.MessageOut,
+}
+local Hacker = nil
+Hacker = hookmetamethod(game, "__namecall", newcclosure(function(...)
+    local Self, Key = ...
+    if table.find(Hack, getnamecallmethod()) and Self == Player then
+        return
+    end
+    if table.find(Uh, getnamecallmethod()) then
+        for i,v in next, getconnections(Self) do
+            v:Disable()
+        end
+    end
+    if type(Self) == "Instance" then
+        return Hacker(...)
+    end
+    return Hacker(...)
+end))
+G.GetFunction = function(A)
+    for i,v in next, getgc() do
+        if type(v) == "function" and getinfo(v).name == A and islclosure(v) then
+            return v 
+        end
+    end
+end
+local getconstants = debug.getconstants or getconstants
+local getidentity = get_thread_context or getthreadcontext or getidentity or syn.get_thread_identity
+local setidentity = set_thread_context or setthreadcontext or setidentity or syn.set_thread_identity
+local hookfunc = hookfunction or hookfunc or detour_function
+for a, b in next, getgc() do
+    if type(b) == "function" and islclosure(b) then
+        local c = getconstants(b)
+        if table.find(c, "Detected") and table.find(c, "crash") then
+            hookfunc(
+                b,
+                function()
+                    return task.wait(math.huge)
+                end
+            )
+        end
+    end
+end
+G.GetFunction = function(A)
+    for i,v in next, getgc() do
+        if type(v) == "function" and getinfo(v).name == A and islclosure(v) then
+            return v 
+        end
+    end
+end
+
+G.Teleport = function(A, B, Toggle)
+    if Toggle and A and B then
+        A.CFrame = B
+    end
+    return A, B, Toggle
+end
+
+G.DisableConnection = function(A)
+    for i,v in next, getconnections(A) do 
+        v:Disable()
+    end
+    return A
+end
+
+G.FireConnection = function(A)
+    for i,v in next, getconnections(A) do
+        v:Fire()
+    end
+end
+G.Mag = function(A, B)
+    return (A.Position - B.Position).Magnitude
+end
