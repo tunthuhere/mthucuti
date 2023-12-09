@@ -3427,7 +3427,7 @@ function library:CreateWindow(options, ...)
 				end
 				realTextbox.BackgroundColor3 = Color3.new(1, 1, 1)
 				realTextbox.BackgroundTransparency = 1
-				realTextbox.Position = UDim2.new(0.0295485705)
+				realTextbox.Position = UDim2.new(0.0345485705)
 				realTextbox.Size = UDim2.fromScale(0.97, 1)
 				realTextbox.ZIndex = 5
 				realTextbox.Font = Enum.Font.Code
@@ -3435,7 +3435,7 @@ function library:CreateWindow(options, ...)
 				realTextbox.Text = tostring(presetValue)
 				realTextbox.TextColor3 = library.colors.otherElementText
 				colored[1 + #colored] = {realTextbox, "TextColor3", "otherElementText"}
-				realTextbox.TextSize = 14
+				realTextbox.TextSize = 12
 				if options.ClearTextOnFocus or options.ClearText then
 					realTextbox.ClearTextOnFocus = true
 				else
