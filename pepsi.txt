@@ -4443,7 +4443,7 @@ function library:CreateWindow(options, ...)
 				newDropdown.Parent = sectionHolder
 				newDropdown.BackgroundColor3 = Color3.new(1, 1, 1)
 				newDropdown.BackgroundTransparency = 1
-				newDropdown.Size = UDim2.new(1, 0, 0, 42)
+				newDropdown.Size = UDim2.new(1, 0, 0, 28)
 				dropdown.Name = "dropdown"
 				dropdown.Parent = newDropdown
 				dropdown.Active = true
