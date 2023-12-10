@@ -4443,7 +4443,7 @@ function library:CreateWindow(options, ...)
 				newDropdown.Parent = sectionHolder
 				newDropdown.BackgroundColor3 = Color3.new(1, 1, 1)
 				newDropdown.BackgroundTransparency = 1
-				newDropdown.Size = UDim2.new(1, 0, 0, 10)
+				newDropdown.Size = UDim2.new(1, 0, 0, 5)
 				dropdown.Name = "dropdown"
 				dropdown.Parent = newDropdown
 				dropdown.Active = true
@@ -4454,7 +4454,7 @@ function library:CreateWindow(options, ...)
 				colored[1 + #colored] = {dropdown, "BorderColor3", "elementBorder"}
 				dropdown.Position = UDim2.fromScale(0.027, 0.45)
 				dropdown.Selectable = true
-				dropdown.Size = UDim2.fromOffset(100, 18)
+				dropdown.Size = UDim2.fromOffset(206, 18)
 				dropdown.Image = "rbxassetid://2454009026"
 				dropdown.ImageColor3 = library.colors.bottomGradient
 				local colored_dropdown_ImageColor3 = {dropdown, "ImageColor3", "bottomGradient"}
