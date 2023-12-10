@@ -4410,7 +4410,7 @@ function library:CreateWindow(options, ...)
 				local dropdownHolderInner = Instance_new("ImageLabel")
 				local realDropdownHolder = Instance_new("ScrollingFrame")
 				local realDropdownHolderList = Instance_new("UIListLayout")
-				local dropdownEnabled = false
+				local dropdownEnabled = true
 				local resolvelist = getresolver(listt, options.Filter)
 				local list = resolvelist()
 				if next(list) then
