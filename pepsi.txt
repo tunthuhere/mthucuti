@@ -4519,7 +4519,7 @@ function library:CreateWindow(options, ...)
 				colored[1 + #colored] = {dropdownHolderFrame, "BorderColor3", "elementBorder"}
 				dropdownHolderFrame.Position = UDim2.fromScale(0.025, 1.012)
 				dropdownHolderFrame.Selectable = true
-				dropdownHolderFrame.Size = UDim2.fromOffset(206, 22)
+				dropdownHolderFrame.Size = UDim2.fromOffset(150, 22)
 				dropdownHolderFrame.Visible = false
 				dropdownHolderFrame.Image = "rbxassetid://2454009026"
 				dropdownHolderFrame.ImageColor3 = library.colors.bottomGradient
