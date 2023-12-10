@@ -4454,7 +4454,7 @@ function library:CreateWindow(options, ...)
 				colored[1 + #colored] = {dropdown, "BorderColor3", "elementBorder"}
 				dropdown.Position = UDim2.fromScale(0.027, 0.45)
 				dropdown.Selectable = true
-				dropdown.Size = UDim2.fromOffset(206, 18)
+				dropdown.Size = UDim2.fromOffset(150, 18)
 				dropdown.Image = "rbxassetid://2454009026"
 				dropdown.ImageColor3 = library.colors.bottomGradient
 				local colored_dropdown_ImageColor3 = {dropdown, "ImageColor3", "bottomGradient"}
