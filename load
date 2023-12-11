@@ -22,14 +22,14 @@ if makefolder and not isfile("Plutonium") then
 end
 G.Settings = {}
 local Pcall = pcall(function()
-    if isfile("Plutonium//" .. Name) then
-        readfile("Plutonium//" .. Name)
+    if isfile("Nothing//" .. Name) then
+        readfile("Nothing//" .. Name)
     else
-        writefile("Plutonium//" .. Name, HttpService:JSONEncode(Des))
+        writefile("Nothing//" .. Name, HttpService:JSONEncode(Des))
     end
 end)
-if isfile("Plutonium//" .. Name) and readfile("Plutonium//" .. Name) then
-    Settings = HttpService:JSONDecode(readfile("Plutonium//" .. Name))
+if isfile("Nothing//" .. Name) and readfile("Nothing//" .. Name) then
+    Settings = HttpService:JSONDecode(readfile("Nothing//" .. Name))
 end
 local Hack = {
     "Kick",
