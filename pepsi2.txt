@@ -16,7 +16,7 @@ up.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 up.Size = UDim2.new(0, 50, 0, 37)
 up.Font = Enum.Font.Code
 up.Text = "Toggle"
-up.TextColor3 = Color3.fromRGB(166, 30, 166)
+up.TextColor3 = Color3.fromRGB(0, 111, 0)
 up.TextSize = 14.000
 up.MouseButton1Down:Connect(function()
 	game:GetService("VirtualInputManager"):SendKeyEvent(true, "F6" , false , game)
