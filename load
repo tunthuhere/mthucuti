@@ -17,8 +17,8 @@ G.Kick = Player.Kick
 G.Idled = Player.Idled
 local Name = game.PlaceId .. ".json"
 local Des = {}
-if makefolder and not isfile("Plutonium") then
-    makefolder("Plutonium")
+if makefolder and not isfile("Nothing") then
+    makefolder("Nothing")
 end
 G.Settings = {}
 local Pcall = pcall(function()
