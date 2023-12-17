@@ -1,3 +1,4 @@
+
 local services = setmetatable({}, { __index = function(self, key)
     local service = game:GetService(key)
     self[key] = service
@@ -94,7 +95,8 @@ ballsFolder.ChildAdded:Connect(function()
                 task.wait(0.1)
                 usedRemote = true
             elseif timeToReachPlayer > 0.6 then
-                usedRemote = false
+                game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("ParryButtonPress"):Fire()
+                usedRemote = true
             end
         end)
     end
