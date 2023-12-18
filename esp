@@ -2,7 +2,7 @@ MobEsp = false
 MobLocations = {game:GetService("Workspace")} --add locations of the mobs in the workspace
 MobNames = {"Player"} --add the names of the mobs
 
-PlayerESP = false
+PlayerESP = true
 
 plr = game.Players.LocalPlayer
 _G.on = true --set to false if you want to turn it off
