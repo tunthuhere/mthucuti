@@ -1,8 +1,8 @@
-MobEsp = false
-MobLocations = {game:GetService("Workspace")} --add locations of the mobs in the workspace
-MobNames = {"Player"} --add the names of the mobs
+MobEsp = true
+MobLocations = {game:GetService("Workspace:FindFirstChild("Balls")")} --add locations of the mobs in the workspace
+MobNames = {"Ball"} --add the names of the mobs
 
-PlayerESP = nil
+PlayerESP = true
 
 plr = game.Players.LocalPlayer
 _G.on = true --set to false if you want to turn it off
