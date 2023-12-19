@@ -1,28 +1,3 @@
-local main = Instance.new("ScreenGui")
-local Frame = Instance.new("Frame")
-local up = Instance.new("TextButton")
-main.Name = "main"
-main.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-main.ResetOnSpawn = false
-Frame.Parent = main
-Frame.BackgroundColor3 = Color3.fromRGB(139, 22, 139)
-Frame.BorderColor3 = Color3.fromRGB(139, 22, 139)
-Frame.Position = UDim2.new(0.100320168, 0, 0.379746825, 0)
-Frame.Size = UDim2.new(0, 46, 0, 32)
-up.Name = "up"
-up.Parent = Frame
-up.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-up.Size = UDim2.new(0, 50, 0, 37)
-up.Font = Enum.Font.Code
-up.Text = "Toggle"
-up.TextColor3 = Color3.fromRGB(0, 112, 0)
-up.TextSize = 14.000
-up.MouseButton1Down:Connect(function()
-	game:GetService("VirtualInputManager"):SendKeyEvent(true, "F6" , false , game)
-end)
-
-
 --[[ Pepsi's UI Library
 Better and updated web-based docs are planned in distant future.
 Library v0.36 [
@@ -502,14 +477,14 @@ local library = {
 		easingDirection = Enum.EasingDirection.Out
 	},
 	colors = {
-		main = Color3.fromRGB(0, 153, 0),
+		main = Color3.fromRGB(0, 0, 0),
 		background = Color3.fromRGB(40, 40, 40),
-		outerBorder = Color3.fromRGB(0, 133, 0),
+		outerBorder = Color3.fromRGB(0, 0, 0),
 		innerBorder = Color3.fromRGB(73, 63, 73),
 		topGradient = Color3.fromRGB(35, 35, 35),
 		bottomGradient = Color3.fromRGB(29, 29, 29),
 		sectionBackground = Color3.fromRGB(35, 34, 35),
-		section = Color3.fromRGB(0, 102, 0),
+		section = Color3.fromRGB(0, 0, 0),
 		otherElementText = Color3.fromRGB(129, 127, 129),
 		elementText = Color3.fromRGB(147, 145, 147),
 		elementBorder = Color3.fromRGB(20, 20, 20),
